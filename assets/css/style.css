@@ -6,10 +6,10 @@
 body{
     background: #1D232A;
     font-family: 'Opens-sans','icones', sans-serif; 
+    color: #FFF;
 }
 
 .cabecalho{
-    color: #FEFEFE;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,10 +106,17 @@ body{
 
 .principal{
     padding: 24px 16px;
+    display: grid;
+    gap: 16px
 }
 
 .titulo__pagina{
     font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.titulo-secao{
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -121,10 +128,15 @@ body{
     color: #FFF;
 }
 
+.cartao--destaque{
+    margin-bottom: 16px;
+}
+
 .cartao__conteudo{
     padding: 16px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
     
 }
 
@@ -160,6 +172,11 @@ body{
     margin-right: 8px;
 }
 
+.cartao__info--compra::before{
+    content: '\e905';
+    margin-right: 8px;
+}
+
 .cartao__botao{
     display: flex;
     justify-content: center;
@@ -169,11 +186,16 @@ body{
     height: 40px;
     border-radius: 10px;
     font-size: 0.9rem;
-    
+    justify-self: flex-end;
 }
 
 .cartao__botao--play::before{
     content: '\e90b';
+    font-size: 24px;
+}
+
+.cartao__botao--compra::before{
+    content: '\e901';
     font-size: 24px;
 }
 
@@ -184,4 +206,9 @@ body{
 
 .cartao__botao--destaque::before{
     margin-right: 8px;
+}
+
+.secao{
+    display: grid;
+    gap: 16px;
 }
