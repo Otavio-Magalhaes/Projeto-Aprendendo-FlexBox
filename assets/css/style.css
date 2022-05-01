@@ -32,6 +32,11 @@ body{
     width: 40px;
 }
 
+.cabecalho__perfil{
+    display: none;
+}
+
+
 .menu-lateral{
 
     display: flex;
@@ -211,4 +216,17 @@ body{
 .secao{
     display: grid;
     gap: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+    body{
+        display:grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .cabecalho{
+        background: #1D232A;
+        display: grid;
+         
+    }
 }
